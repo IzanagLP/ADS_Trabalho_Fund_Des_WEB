@@ -3,6 +3,7 @@ body {
     background-color: grey;
 }
 
+/*Barra de navegação \/ */
 .navbar {
     /*Mantém a barra de navegação no topo da página o tempo todo*/
     position: fixed;
@@ -30,7 +31,6 @@ body {
     text-decoration: none;
     padding: 15px;
     display: block;
-    text-align: center;
 }
 
 /*Escurece o item ao passar o mouse por cima*/
@@ -38,21 +38,23 @@ body {
     background-color: hsl(0, 0%, 10%);
 }
 
+/*Abriga os itens sobre, formação, etc.*/
 .main {
-    /*Ao clicar na barra de navegacao a pagina se move suavemente até lá*/
-    scroll-behavior: smooth;
-
+    height: 100vh;
     margin-top: 60px;
     margin-left: 20px;
     margin-right: 20px;
 
-    /*Para ir de sessão em sessão ao girar a roda do mouse*/
+    /*Ativa uma transição suave ao clicar em um item da barra de navegação*/
+    scroll-behavior: smooth;
+
+    /*Ativa o habilidade de ir de sessão em sessão com a roda do mouse*/
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     
-    height: 100vh;
 }
 
+/*Propriedades de cada sessão do site*/
 .main .item {
     /*Para ir de sessão em sessão ao girar a roda do mouse*/
     scroll-snap-align: start;
@@ -68,12 +70,14 @@ body {
     box-sizing: border-box;
 }
 
+/*Propriedades do texto dentro de cada sessão*/
 .main .item p {
     font-size: 50px;
     font-family: sans-serif;
     margin: 20px;
 }
 
+/*Tamanho das imagens de cabeçario*/
 .main .item img {
     height: 160px;
     width: 160px;
