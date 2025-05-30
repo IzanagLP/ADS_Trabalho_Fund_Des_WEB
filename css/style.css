@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background-color: grey;
+}
+
+.navbar {
+    /*Mantém a barra de navegação no topo da página o tempo todo*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsl(0, 0%, 25%);
+    
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar li {
+    padding: 0px 50px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+/*Escurece o item ao passar o mouse por cima*/
+.navbar a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+.main {
+    /*Ao clicar na barra de navegacao a pagina se move suavemente até lá*/
+    scroll-behavior: smooth;
+
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    /*Para ir de sessão em sessão ao girar a roda do mouse*/
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    
+    height: 100vh;
+}
+
+.main .item {
+    /*Para ir de sessão em sessão ao girar a roda do mouse*/
+    scroll-snap-align: start;
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.main .item p {
+    font-size: 50px;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.main .item img {
+    height: 160px;
+    width: 160px;
+}
